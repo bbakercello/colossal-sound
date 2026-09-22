@@ -1,17 +1,22 @@
-# Godot 4+ specific ignores
+# Godot 4 editor and import cache
 .godot/
-.nomedia
+/android/
 
-# Godot-specific ignores
-.import/
+# Exports and credentials
 export.cfg
 export_credentials.cfg
-*.tmp
+/build/
+/exports/
 
-# Imported translations (automatically generated from CSV files)
+# Generated from CSV translation sources
 *.translation
 
-# Mono-specific ignores
-.mono/
-data_*/
-mono_crash.*.json
+# Editor and OS noise
+*.tmp
+.DS_Store
+
+
+
+
+# cursor rules
+.cursor/rules/*

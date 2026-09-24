@@ -16,7 +16,8 @@ export_credentials.cfg
 .DS_Store
 
 
-
-
 # cursor rules
 .cursor/rules/*
+
+# docs
+docs/*

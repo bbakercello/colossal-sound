@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://c6ph5wasbk46d"]
+[gd_scene load_steps=5 format=3 uid="uid://c6ph5wasbk46d"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_main"]
 [ext_resource type="TileSet" path="res://assets/placeholder/tileset/terrain_tileset.tres" id="2_tileset"]
 [ext_resource type="PackedScene" uid="uid://b8pqxlyrnvk2w" path="res://player/player.tscn" id="3_player"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wall"]
+size = Vector2(16, 200)
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_main")
@@ -14,3 +17,19 @@ tile_set = ExtResource("2_tileset")
 [node name="Player" parent="." instance=ExtResource("3_player")]
 unique_name_in_owner = true
 position = Vector2(80, -8)
+
+[node name="LeftBoundary" type="StaticBody2D" parent="."]
+collision_layer = 2
+collision_mask = 0
+position = Vector2(0, -100)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftBoundary"]
+shape = SubResource("RectangleShape2D_wall")
+
+[node name="RightBoundary" type="StaticBody2D" parent="."]
+collision_layer = 2
+collision_mask = 0
+position = Vector2(1600, -100)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightBoundary"]
+shape = SubResource("RectangleShape2D_wall")

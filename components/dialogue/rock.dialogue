@@ -1,0 +1,9 @@
+~ start
+Rock: ...
+
+Rock: What do you want? 
+ - Player: Just poking around.
+ - Player: I'm looking for a way to find my voice. 
+ - Player: You're talkative for a rock. 
+
+ => END

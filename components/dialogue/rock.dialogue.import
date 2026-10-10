@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://bci3xeyohnl3h"
+path="res://.godot/imported/rock.dialogue-b0631b10d4b56ab36b842b804033570c.tres"
+
+[deps]
+
+source_file="res://components/dialogue/rock.dialogue"
+dest_files=["res://.godot/imported/rock.dialogue-b0631b10d4b56ab36b842b804033570c.tres"]
+
+[params]
+
+defaults=true

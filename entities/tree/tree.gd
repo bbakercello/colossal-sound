@@ -1,10 +1,7 @@
 class_name WorldTree
 extends Node2D
 
-signal interacted(message: String)
-signal left(message: String)
-
-@export var message: String = "This tree is tall and majestic."
+signal interacted
 
 
 func _ready() -> void:
@@ -15,15 +12,9 @@ func _ready() -> void:
 	add_child(sprite)
 
 	var interactable := Interactable.new()
-	interactable.message = message
 	interactable.interacted.connect(_on_interacted)
-	interactable.left.connect(_on_left)
 	add_child(interactable)
 
 
-func _on_interacted(text: String) -> void:
-	interacted.emit(text)
-
-
-func _on_left(text: String) -> void:
-	left.emit(text)
+func _on_interacted() -> void:
+	interacted.emit()

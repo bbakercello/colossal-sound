@@ -1,10 +1,7 @@
 class_name Interactable
 extends Area2D
 
-signal interacted(message: String)
-signal left(message: String)
-
-@export var message: String = "Interact"
+signal interacted
 
 var _player_inside := false
 
@@ -28,7 +25,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		return
 	if not _player_is_inside():
 		return
-	interacted.emit(message)
+	interacted.emit()
 	get_viewport().set_input_as_handled()
 
 
@@ -37,7 +34,7 @@ func _player_is_inside() -> bool:
 		if body is Player:
 			return true
 	return _player_inside
- 
+
 
 func _on_body_entered(body: Node2D) -> void:
 	if body is Player:
@@ -47,4 +44,3 @@ func _on_body_entered(body: Node2D) -> void:
 func _on_body_exited(body: Node2D) -> void:
 	if body is Player:
 		_player_inside = false
-		left.emit(message)

@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://6fouuw16iafg" path="res://assets/Env1_Art/CityBG.png" id="8_dg77c"]
 [ext_resource type="Texture2D" uid="uid://c1yj2w30ofkld" path="res://assets/Env1_Art/Colossus.png" id="9_ycdy4"]
 [ext_resource type="Texture2D" uid="uid://cylkyxdh4bdj6" path="res://assets/Env1_Art/Sky.png" id="10_w48qg"]
+[ext_resource type="AudioStream" uid="uid://c7mhguidxyou5" path="res://assets/music/Walking.ogg" id="11_efxa6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wall"]
 size = Vector2(16, 200)
@@ -85,3 +86,13 @@ texture = ExtResource("9_ycdy4")
 z_index = -20
 position = Vector2(789, -408)
 texture = ExtResource("10_w48qg")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=392630212]
+position = Vector2(800, -120)
+zoom = Vector2(1.2, 1.2)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Camera2D" unique_id=1550602345]
+stream = ExtResource("11_efxa6")
+volume_db = -10.0
+autoplay = true
+parameters/looping = true

@@ -6,7 +6,6 @@ extends CharacterBody2D
 @export var ground_friction: float = 900.0
 
 @onready var _visual: Node2D = %Visual
-@onready var _camera: Camera2D = %Camera
 
 
 func _physics_process(delta: float) -> void:
@@ -24,11 +23,3 @@ func _physics_process(delta: float) -> void:
 		_visual.scale.x = -1.0 if direction < 0.0 else 1.0
 
 	move_and_slide()
-
-
-func set_camera_limits(bounds: Rect2) -> void:
-	_camera.limit_left = roundi(bounds.position.x)
-	_camera.limit_top = roundi(bounds.position.y)
-	_camera.limit_right = roundi(bounds.end.x)
-	_camera.limit_bottom = roundi(bounds.end.y)
-	_camera.reset_smoothing()

@@ -2,13 +2,8 @@ extends Node2D
 
 const ROCK_DIALOGUE: DialogueResource = preload("res://components/dialogue/rock.dialogue")
 
-@export var camera_bounds := Rect2(0, -360, 1600, 480)
-
-@onready var _player: Player = %Player
-
 
 func _ready() -> void:
-	_player.set_camera_limits(camera_bounds)
 	_add_rock(Vector2(220, 0), ROCK_DIALOGUE)
 
 

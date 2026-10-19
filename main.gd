@@ -1,16 +1,18 @@
 extends Node2D
 
-const ROCK_DIALOGUE: DialogueResource = preload("res://components/dialogue/rock.dialogue")
+const COLOSSUS_DIALOGUE: DialogueResource = preload("res://components/dialogue/colossus.dialogue")
+
+@onready var _colossus: Colossus = %Colossus
 
 
 func _ready() -> void:
-	_add_rock(Vector2(220, 0), ROCK_DIALOGUE)
+	_add_rock(Vector2(220, 0))
+	_colossus.interacted.connect(_on_dialogue_requested.bind(COLOSSUS_DIALOGUE))
 
 
-func _add_rock(at: Vector2, dialogue: DialogueResource) -> void:
+func _add_rock(at: Vector2) -> void:
 	var rock := Rock.new()
 	rock.position = at
-	rock.interacted.connect(_on_dialogue_requested.bind(dialogue))
 	add_child(rock)
 
 

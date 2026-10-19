@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://phtxetkobpiw"
+path="res://.godot/imported/colossus.dialogue-d77596e178dcbaafcbb2cf25ccee71fa.tres"
+
+[deps]
+
+source_file="res://components/dialogue/colossus.dialogue"
+dest_files=["res://.godot/imported/colossus.dialogue-d77596e178dcbaafcbb2cf25ccee71fa.tres"]
+
+[params]
+
+defaults=true

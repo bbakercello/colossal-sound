@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://c1yj2w30ofkld" path="res://assets/Env1_Art/Colossus.png" id="9_ycdy4"]
 [ext_resource type="Texture2D" uid="uid://cylkyxdh4bdj6" path="res://assets/Env1_Art/Sky.png" id="10_w48qg"]
 [ext_resource type="AudioStream" uid="uid://c7mhguidxyou5" path="res://assets/music/Walking.ogg" id="11_efxa6"]
+[ext_resource type="Script" uid="uid://b7n2colossus1" path="res://entities/colossus/colossus.gd" id="12_colossus"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wall"]
 size = Vector2(16, 200)
@@ -78,9 +79,11 @@ z_index = -10
 texture = ExtResource("8_dg77c")
 
 [node name="Colossus" type="Sprite2D" parent="." unique_id=515478516]
+unique_name_in_owner = true
 z_index = -9
 position = Vector2(620, -440)
 texture = ExtResource("9_ycdy4")
+script = ExtResource("12_colossus")
 
 [node name="Sky" type="Sprite2D" parent="." unique_id=735426002]
 z_index = -20

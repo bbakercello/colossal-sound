@@ -3,15 +3,17 @@ extends Area2D
 
 signal interacted
 
+@export var size := Vector2(40, 40)
+
 var _player_inside := false
 
 
 func _ready() -> void:
 	var shape := RectangleShape2D.new()
-	shape.size = Vector2(40, 40)
+	shape.size = size
 	var collision := CollisionShape2D.new()
 	collision.shape = shape
-	collision.position = Vector2(0, -20)
+	collision.position = Vector2(0, -size.y * 0.5)
 	add_child(collision)
 
 	collision_layer = 0

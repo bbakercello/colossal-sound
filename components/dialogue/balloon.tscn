@@ -125,6 +125,7 @@ layout_mode = 2
 
 [node name="PanelContainer" type="PanelContainer" parent="Balloon/Layout/MarginContainer" unique_id=2145270310]
 clip_children = 2
+custom_minimum_size = Vector2(0, 168)
 layout_mode = 2
 mouse_filter = 1
 

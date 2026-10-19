@@ -1,4 +1,10 @@
 ~ start
+if has_item("rock")
+	=> carrying_rock
+else
+	=> empty_handed
+
+~ empty_handed
 Colossus: ...
 
 Colossus: You are small to be standing here.
@@ -6,6 +12,18 @@ Colossus: You are small to be standing here.
 	Colossus: ...
 - Player: Can you hear me?
 	Colossus: ...
+- Player: Goodbye.
+	Colossus: ...
+
+=> END
+
+~ carrying_rock
+Colossus: You brought a stone.
+
+- Player: I found this on the ground.
+	Colossus: It remembers the place you took it from.
+- Player: Will you take it?
+	Colossus: No. Carry it a little further. I have no need for it.
 - Player: Goodbye.
 	Colossus: ...
 
